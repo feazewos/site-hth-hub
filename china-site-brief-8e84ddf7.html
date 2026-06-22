@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.5">
+  <title>竞彩网 · 快速识别体育赛事投注入口</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background: linear-gradient(145deg, #fbe9d7 0%, #f5d7b0 50%, #edc99b 100%);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1.5rem;
+      line-height: 1.6;
+    }
+
+    .card {
+      max-width: 780px;
+      width: 100%;
+      background: #ffffff;
+      border-radius: 48px 24px 48px 24px;
+      box-shadow: 0 16px 50px rgba(180, 110, 45, 0.18), 0 6px 20px rgba(0,0,0,0.04);
+      padding: 2.8rem 2.8rem 3.2rem;
+      transition: box-shadow 0.25s ease, transform 0.2s;
+    }
+
+    .card:hover {
+      box-shadow: 0 22px 60px rgba(170, 100, 40, 0.22);
+      transform: translateY(-3px);
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: #fceee2;
+      color: #a65d2a;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      padding: 0.3rem 1rem;
+      border-radius: 40px;
+      margin-bottom: 1.6rem;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 600;
+      color: #2e241b;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.8rem;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      color: #5f4a37;
+      background: rgba(248, 230, 210, 0.4);
+      padding: 0.7rem 1.2rem;
+      border-radius: 100px;
+      display: inline-block;
+      margin-bottom: 1.8rem;
+      backdrop-filter: blur(4px);
+      border: 1px solid #f1d9bf;
+    }
+
+    .intro-text {
+      font-size: 1.05rem;
+      color: #3b2f26;
+      margin-bottom: 2rem;
+      padding-right: 0.5rem;
+    }
+
+    .intro-text a {
+      color: #b46a30;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 2px solid #ecc7ab;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .intro-text a:hover {
+      color: #814f26;
+      border-bottom-color: #b46a30;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem 1.8rem;
+      margin: 2.4rem 0 2rem;
+    }
+
+    .feature-item {
+      background: #fcf7f1;
+      padding: 1.2rem 1.2rem 1.4rem;
+      border-radius: 24px;
+      border-left: 4px solid #ddb28b;
+      transition: background 0.2s;
+    }
+
+    .feature-item:hover {
+      background: #f8ede2;
+    }
+
+    .feature-item .emoji-badge {
+      font-size: 1.5rem;
+      display: inline-block;
+      margin-right: 0.4rem;
+    }
+
+    .feature-title {
+      display: flex;
+      align-items: center;
+      font-weight: 600;
+      color: #2f241c;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .feature-desc {
+      font-size: 0.9rem;
+      color: #5c4a3c;
+      margin-top: 0.2rem;
+    }
+
+    .scene-block {
+      margin: 2.2rem 0 2.6rem;
+      padding: 1.2rem 1.5rem;
+      background: #f5e8dc;
+      border-radius: 28px;
+    }
+
+    .scene-block p {
+      font-size: 0.95rem;
+      color: #3f3128;
+    }
+
+    .scene-block strong {
+      color: #935e32;
+    }
+
+    .faq-note {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+      background: #fdfaf6;
+      border: 1px solid #e7d3c1;
+      border-radius: 40px;
+      padding: 1.2rem 1.8rem;
+      margin: 2rem 0 1.5rem;
+    }
+
+    .faq-note span {
+      font-size: 0.9rem;
+      color: #4d3c2e;
+    }
+
+    .faq-note .label {
+      font-weight: 600;
+      background: #dbb794;
+      color: #271e17;
+      padding: 0.1rem 1rem;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      letter-spacing: 0.5px;
+      white-space: nowrap;
+    }
+
+    .closing {
+      margin-top: 2rem;
+      padding-top: 0.8rem;
+      border-top: 2px dashed #e2cdb9;
+      color: #4b3a2d;
+      font-size: 0.95rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .closing a {
+      background: #ab6f3b;
+      color: #ffffff;
+      padding: 0.4rem 1.8rem;
+      border-radius: 60px;
+      font-weight: 500;
+      font-size: 0.95rem;
+      text-decoration: none;
+      letter-spacing: 0.3px;
+      transition: background 0.2s, box-shadow 0.15s;
+      box-shadow: 0 4px 10px rgba(160, 100, 40, 0.15);
+    }
+
+    .closing a:hover {
+      background: #87542a;
+      box-shadow: 0 6px 16px rgba(150, 85, 30, 0.25);
+    }
+
+    .closing .mild-note {
+      opacity: 0.7;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1.2rem;
+      }
+      .card {
+        padding: 2rem 1.2rem 2.2rem;
+        border-radius: 32px 16px 32px 16px;
+      }
+      h1 {
+        font-size: 1.6rem;
+      }
+      .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .subhead {
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+      }
+      .faq-note {
+        flex-direction: column;
+        padding: 1rem 1.2rem;
+        border-radius: 28px;
+      }
+      .closing {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+        text-align: center;
+      }
+      .closing a {
+        display: inline-block;
+        width: fit-content;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .card {
+        padding: 1.8rem 1rem 2rem;
+      }
+      .feature-item {
+        padding: 1rem 0.9rem;
+      }
+      .hero-tag {
+        font-size: 0.7rem;
+      }
+    }
+
+    /* 纯装饰元素 */
+    .soft-dot {
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      background: #dbb48f;
+      border-radius: 50%;
+      margin: 0 0.5rem 0 0;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <span class="hero-tag">🏟️ 赛事 · 一眼锁定</span>
+
+    <h1>如何在几秒内<br>判断这是你需要的平台</h1>
+
+    <div class="subhead">⚡ 投注入口 · 竞彩导航</div>
+
+    <div class="intro-text">
+      当用户第一次打开一个体育竞猜相关网站时，通常只有一个核心诉求：<strong>快速确认这里是否提供自己关注的赛事、联赛以及清晰的投注路径</strong>。  
+      <a href="https://china-site-sporttery.com">竞彩网</a> 的首页结构正是围绕这一判断场景设计：上方聚合热门联赛与即时指数，中部以卡片陈列重点玩法，底部则保留常用说明入口。整个信息流让用户能够在 3–5 次滚动内评估网站与自身需求的匹配度。
+    </div>
+
+    <!-- 特点列表：突出可识别性 -->
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feature-title"><span class="emoji-badge">📋</span> 联赛陈列优先</div>
+        <div class="feature-desc">五大联赛、欧冠、亚冠、日职联等竞彩常用赛事置顶，无需深层点击即可判断覆盖范围。</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title"><span class="emoji-badge">🧭</span> 玩法分类标签</div>
+        <div class="feature-desc">胜平负 / 让球 / 比分 / 总进球 / 半全场并列展示，降低认知负荷，一眼对应自己熟悉的投注项。</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title"><span class="emoji-badge">📊</span> 指数变化标识</div>
+        <div class="feature-desc">赔率或 SP 值旁带微幅箭头或色块，辅助快速察觉波动场次，减少手动比对时间。</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-title"><span class="emoji-badge">🔍</span> 筛选与搜索栏</div>
+        <div class="feature-desc">按联赛、日期、编号过滤，或直接输入队伍名定位，适合目的明确的用户直接跳转。</div>
+      </div>
+    </div>
+
+    <!-- 场景描述 替代传统介绍 -->
+    <div class="scene-block">
+      <p><strong>👤 典型场景：</strong> 周六晚间，用户打开 <a href="https://china-site-sporttery.com" style="color:#935e32;font-weight:600;border-bottom:1px dashed #c29a76;text-decoration:none;">竞彩网</a> 首页，目光依次扫过顶部「今日受注赛事」列表——看到德甲、西甲、意甲均在列，再下翻至「热门玩法」区域确认让球选项存在，最后瞥一眼指数浮动。整个识别过程不到 20 秒。如果页面结构、赛事覆盖与个人预期吻合，用户便会自然进入选场环节。</p>
+    </div>
+
+    <!-- FAQ 摘要风格——温和提示 -->
+    <div class="faq-note">
+      <span><span class="label">❓ 常见判断点</span> 首页是否直接展示比赛时间 &amp; 编号？赔率更新频率有无注明？</span>
+      <span><span class="label">💡 建议</span> 先浏览「竞彩足球」或「竞彩篮球」分区，确认数据呈现方式符合习惯。</span>
+    </div>
+
+    <!-- 温和结尾 + 自然链接 -->
+    <div class="closing">
+      <span class="mild-note">对赛事覆盖或界面逻辑有疑问？</span>
+      <a href="https://china-site-sporttery.com">竞彩网</a>
+    </div>
+
+    <!-- 极简分隔装饰（不强制，但增加呼吸感） -->
+    <div style="margin-top: 2rem; height: 2px; background: linear-gradient(to right, transparent, #dbbc9f, transparent); border-radius: 10px; opacity: 0.4;"></div>
+  </div>
+</body>
+</html>
